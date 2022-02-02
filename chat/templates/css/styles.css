@@ -1,0 +1,67 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.Wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.Header {
+  width: 100%px;
+  height: 130px;
+  background-color: #038c5a;
+}
+
+.WrapMiddle {
+  width: 100%;
+  font-size: 12px;
+}
+
+.Left {
+  height: 625px;
+  width: 20.83%;
+  background-color: #03a66a;
+  display: inline-block;
+}
+
+.Middle {
+  height: 625px;
+  width: 68.75%;
+  background-color: #bbbf90;
+  display: inline-block;
+}
+
+.Right {
+  height: 625px;
+  width: 10.41%;
+  background-color: #03a66a;
+  display: inline-block;
+}
+
+.Footer {
+  height: 200px;
+  width: 100%;
+  background-color: #025059;
+}
+
+.Left {
+  height: 625px;
+  background-color: #03a66a;
+  display: inline-block;
+  position: absolute;
+  left: -200px;
+  width: 200px;
+  font-size: 0.9rem;
+  transition: transform 0.3s;
+}
+
+@media (min-width: 40rem) {
+  .Left {
+    width: 20.83%;
+    left: 0;
+    position: relative;
+  }
+}
