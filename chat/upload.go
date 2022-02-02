@@ -7,7 +7,7 @@ import (
 	"path"
 )
 
-func uploadHandler(w http.ResponseWriter, req *http.Request) {
+func uploaderHandler(w http.ResponseWriter, req *http.Request) {
 	userId := req.FormValue("userid")
 	file, header, err := req.FormFile("avatarFile")
 	if err != nil {
