@@ -1,0 +1,138 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: 0 auto;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #5298b8;
+    background: -webkit-linear-gradient(right, #5298b8, #69a2d6);
+    background: -moz-linear-gradient(right, #5298b8, #69a2d6 );
+    background: -o-linear-gradient(right, #5298b8, #69a2d6);
+    background: linear-gradient(to left, #5298b8, #69a2d6);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.logmod {
+    display : block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.logmod__container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.logmod__container::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.logmod__alter {
+    display: block;
+    position: relative;
+    margin-top: 7px;
+}
+
+.logmod__alter::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.logmod__alter .connect:last-child {
+    border-radius: 0 0 4px 4px;
+}
+
+.connect {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 72px;
+    line-height: 72px;
+    text-decoration: none;
+}
+
+.connect::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.connect:focus, .connect:hover, .connect:visited {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.connect__icon {
+    vertical-align: middle;
+    float: left;
+    width: 70px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.connect__context {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.connect.googleplus {
+    background: #dd4b39;
+    color: #FFF;
+}
+
+.connect.googleplus a {
+    color: #FFF;
+}
+
+.connect.googleplus .connect__icon {
+    background: #b52f1f;
+}
+
+.connect.facebook {
+    background: #3b5998;
+    color: #FFF;
+}
+
+.connect.facebook a {
+    color: #FFF;
+}
+  
+.connect.facebook .connect__icon {
+    background: #283d68;
+}
+
+.connect.github {
+    background: #34373c;
+    color: #FFF;
+}
+
+.connect.github a {
+    color: #FFF;
+}
+  
+.connect.github .connect__icon {
+    background: #232324;
+}

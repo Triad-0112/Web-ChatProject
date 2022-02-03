@@ -60,9 +60,13 @@ func main() {
 
 	http.Handle("/avatars/", http.StripPrefix("/avatars/", http.FileServer(http.Dir("./avatars/"))))
 
-	http.Handle("/", &templateHandler{filename: "login.html"})
+	http.Handle("/", &templateHandler{filename: "index.html"})
 
-	http.Handle("/css/", http.StripPrefix("/css", http.FileServer(http.Dir("./assets/css/"))))
+	http.Handle("/index", &templateHandler{filename: "index.html"})
+
+	http.Handle("/css/", http.StripPrefix("/css", http.FileServer(http.Dir("./templates/css/"))))
+
+	http.Handle("/js/", http.StripPrefix("/js", http.FileServer(http.Dir("./templates/js/"))))
 
 	//redirect chat so it need to be an authorization user / client
 	http.Handle("/chat", MustAuth(&templateHandler{filename: "chat.html"}))
