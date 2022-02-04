@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"net/http"
 	"os"
 	"webchat/tracer"
@@ -18,12 +19,10 @@ var avatars Avatar = TryAvatars{
 }
 
 func main() {
-<<<<<<< HEAD
+
 	addr := flag.String("addr", "localhost:8080", "Input place for send our work or data")
 	flag.Parse()
-=======
 
->>>>>>> 7582f64937368979b24f1a8f2a250242f201926d
 	//Authkey access to call login
 	gomniauth.SetSecurityKey("983njfnv90n90n490ngf9gjg59njg002-2me,,-d;--0j3-0jrn-2njf9uh93#^T$b8cdb94bnvf0n490nfnB*#*b3nf8549nv9d9239f9mc9*G#*f94fn94ht5939dj9c0kld-0jg0tj03mdp0m9Enf49fn39ur9jgfmgn90gn940hnt0490ty49-5t940kf0fk0ck904n9gn405n9y50gj0j95y805j0ghmkb0imdo0ld-30d3-03,mog50j50kg-,40j0mf0mgo94h940t-hky-5kt-lyh-u-ko4-k-f,k=-3efk-04j-0yk=5kygko-g,koregmij40-jyh34-m-fw-fm3n0tyh40tj")
 	gomniauth.WithProviders(
