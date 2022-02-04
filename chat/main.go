@@ -60,9 +60,9 @@ func main() {
 
 	http.Handle("/avatars/", http.StripPrefix("/avatars/", http.FileServer(http.Dir("./avatars/"))))
 
-	http.Handle("/", &templateHandler{filename: "index.html"})
+	http.Handle("/", MustAuth(&templateHandler{filename: "index.html"}))
 
-	http.Handle("/index", &templateHandler{filename: "index.html"})
+	http.Handle("/index", MustAuth(&templateHandler{filename: "index.html"}))
 
 	http.Handle("/css/", http.StripPrefix("/css", http.FileServer(http.Dir("./templates/css/"))))
 

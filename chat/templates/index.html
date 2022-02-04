@@ -8,10 +8,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://unpkg.com/augmented-ui@2.0.0/augmented-ui.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.35.0/codemirror.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/addon/scroll/simplescrollbars.min.css" rel="stylesheet">
         <link href="/css/index.css" rel="stylesheet" type="text/css">
         <link href="/css/codething.css" rel="stylesheet" type="text/css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
     </head>
     <body>
         <section class="nav">
@@ -53,7 +55,7 @@
             <section class="slider" id="tab-laboratory">
                 <h1>Laboratory</h1>
                 <h2>Your Lab!!!</h2>
-                <code class="code-container" content="// たつじん">
+                <div class="code-container" content="// たつじん">
                     <div class="glow-container">
                         <div class="augs" data-augmented-ui></div>
                     </div>
@@ -67,6 +69,7 @@
 時計＝タイマー！　作る　0.1秒　間隔　500回　回数。 時計！　「かめ太！　１０　歩く」　実行。
 左＝ボタン！”左”作る。 左：動作＝「かめ太！　２０　左回り」。
 右＝ボタン！”右”作る。 右：動作＝「かめ太！　10　右回り」。
+
 #ifndef BITCOIN_BLOCKENCODINGS_H
 #define BITCOIN_BLOCKENCODINGS_H
 
@@ -206,10 +209,17 @@ public:
                             </textarea>
                         </div>
                     </section>
-                </code>
+                </div>
             </section>
         </main>
         <canvas class="background"></canvas>
-        <script src="/js/index.js"></script>  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/javascript/javascript.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/css/css.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/addon/scroll/simplescrollbars.min.js"></script>
+        <script src="/js/index.js"></script>
+        <script src="/js/codething.js"></script> 
     </body>
 </html>

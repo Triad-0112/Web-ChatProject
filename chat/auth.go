@@ -108,7 +108,7 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 			Value:   authCookieValue,
 			Path:    "/",
 			Expires: time.Now().Add(5 * time.Minute)})
-		w.Header().Set("Location", "/chat")
+		w.Header().Set("Location", "/index")
 		w.WriteHeader(http.StatusTemporaryRedirect)
 	default:
 		w.WriteHeader(http.StatusNotFound)
