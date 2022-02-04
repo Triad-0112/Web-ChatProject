@@ -2,11 +2,10 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://unpkg.com/augmented-ui@2.0.0/augmented-ui.min.css" rel="stylesheet">
@@ -14,6 +13,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/addon/scroll/simplescrollbars.min.css" rel="stylesheet">
         <link href="/css/index.css" rel="stylesheet" type="text/css">
         <link href="/css/codething.css" rel="stylesheet" type="text/css">
+        <title>Laboratory Experiment</title>
     </head>
     <body>
         <section class="nav">
@@ -27,11 +27,11 @@
                 <span class='m'>き</span>
             </h3>
             <div class="nav-container">
-                <a class="nav-tab" href="#profile">My Profile</a>
-                <a class="nav-tab" href="/chat">Chat Room</a>
-                <a class="nav-tab" href="#dashboard">Dashboard</a>
-                <a class="nav-tab" href="#galaxy">Space Room</a>
-                <a class="nav-tab" href="#laboratory">Laboratory</a>
+                <a class="nav-tab" href="#tab-profile">My Profile</a>
+                <a class="nav-tab" href="#tab-chatroom">Chat Room</a>
+                <a class="nav-tab" href="#tab-dashboard">Dashboard</a>
+                <a class="nav-tab" href="#tab-galaxy">Space Room</a>
+                <a class="nav-tab" href="#tab-laboratory">Laboratory</a>
                 <span class="nav-tab-slider"></span>
             </div>
         </section>
@@ -41,19 +41,19 @@
                 <h2>This is your profile...</h2>
             </section>
             <section class="slider" id="tab-chatroom">
-                <h1>Chat Room</h1>
+                <a href="/chat"><h1>Chat Room</h1></a>
                 <h2>Chat here to enjoy...</h2>
             </section>
             <section class="slider" id="tab-dashboard">
                 <h1>Dashboard</h1>
                 <h2>Your Dashboard...</h2>
             </section>
-            <section class="slider" id="tab-spaceroom">
+            <section class="slider" id="tab-galaxy">
                 <h1>Space Room</h1>
                 <h2>The Scenery of Space</h2>
             </section>
             <section class="slider" id="tab-laboratory">
-                <h1>Laboratory</h1>
+                <a href="/laboratory/training"><h1>Laboratory</h1></a>
                 <h2>Your Lab!!!</h2>
                 <div class="code-container" content="// たつじん">
                     <div class="glow-container">

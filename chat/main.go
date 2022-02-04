@@ -22,13 +22,12 @@ var avatars Avatar = TryAvatars{
 func main() {
 	addr := flag.String("addr", "localhost:8080", "Input place for send our work or data")
 	flag.Parse()
-
 	//Authkey access to call login
 	gomniauth.SetSecurityKey("983njfnv90n90n490ngf9gjg59njg002-2me,,-d;--0j3-0jrn-2njf9uh93#^T$b8cdb94bnvf0n490nfnB*#*b3nf8549nv9d9239f9mc9*G#*f94fn94ht5939dj9c0kld-0jg0tj03mdp0m9Enf49fn39ur9jgfmgn90gn940hnt0490ty49-5t940kf0fk0ck904n9gn405n9y50gj0j95y805j0ghmkb0imdo0ld-30d3-03,mog50j50kg-,40j0mf0mgo94h940t-hky-5kt-lyh-u-ko4-k-f,k=-3efk-04j-0yk=5kygko-g,koregmij40-jyh34-m-fw-fm3n0tyh40tj")
 	gomniauth.WithProviders(
-		google.New("60064740283-rlqg8cd2r5o3vgbjhhcph768e4js2g8o.apps.googleusercontent.com", "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", "http://localhost:8080/auth/callback/google"),
-		facebook.New("key", "secret", "http://localhost:8080/auth/callback/facebook"),
-		github.New("key", "secret", "http://localhost:8080/auth/callback/github"),
+		google.New("60064740283-rlqg8cd2r5o3vgbjhhcph768e4js2g8o.apps.googleusercontent.com", "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", "http://"+*addr+"/auth/callback/google"),
+		facebook.New("key", "secret", "http://"+*addr+"/auth/callback/facebook"),
+		github.New("key", "secret", "http://"+*addr+"/auth/callback/github"),
 	)
 
 	//using DefaultServeMux
@@ -59,6 +58,8 @@ func main() {
 	//http.Handle("/", &templateHandler{filename: "chat.html"})
 
 	http.Handle("/avatars/", http.StripPrefix("/avatars/", http.FileServer(http.Dir("./avatars/"))))
+
+	http.Handle("/laboratory/training", MustAuth(&templateHandler{filename: "laboratory/laboratory.html"}))
 
 	http.Handle("/", MustAuth(&templateHandler{filename: "index.html"}))
 
